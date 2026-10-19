@@ -10,12 +10,12 @@
       "notes": "Herkes için uygulamadan webde sunucu oluşturma; Windows panel kısayolu, siteden uygulamayı açma ve adresle katılım."
     },
     "android": {
-      "version": "1.0.8",
-      "url": "https://drainsood.vercel.app/indir/DrainsoodPhone-1.0.8.apk",
-      "sha256": "f7550f01df6496f19f3e0421f263950e54f6488edf12b32301b2ae3facf8016c",
-      "size": 28119974,
-      "notes": "Herkes için uygulamadan webde sunucu oluşturma; Windows panel kısayolu, siteden uygulamayı açma ve adresle katılım.",
-      "version_code": 9
+      "version": "1.0.9",
+      "url": "https://drainsood.vercel.app/indir/DrainsoodPhone-1.0.9.apk",
+      "sha256": "0e80e9f9810f4123852d3c09ede675906c970e2f21466ecc9c093a36ac2f5882",
+      "size": 28124070,
+      "notes": "Önce giriş ekranı, PC ile ortak hesap ve sohbet sistemi; telefona uyarlanmış sunucu, kanal, arkadaş ve arama düzeni.",
+      "version_code": 10
     }
   }
 }
