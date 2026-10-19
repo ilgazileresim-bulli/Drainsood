@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c15"><meta name="description" content="Drainsood sunucunu webden oluştur, adresini paylaş ve ayarlarını yönet.">
+  <title>Sunucuların · Drainsood</title>
+  <link rel="icon" href="./logo.png"><link rel="stylesheet" href="./panel.css"><script src="./panel.js" defer></script>
+</head>
+<body>
+ <a class="skip-link" href="#workspace">İçeriğe geç</a>
+ <header class="topbar"><a class="brand" href="../index.html" aria-label="Drainsood ana sayfa"><img src="./logo.png" width="32" height="32" alt="">drainsood<span>.</span></a><span class="product-label">SUNUCU YÖNETİMİ</span><div class="topbar-actions"><span id="connection-state" class="connection-state">Bağlantı kontrol ediliyor</span><button id="signout" class="quiet" hidden>Çıkış yap ↗</button></div></header>
+ <main id="workspace">
+  <section id="gateway" class="gateway">
+   <div class="gateway-intro"><span class="eyebrow">İNSANLARINA BİR YER AÇ</span><h1>Kendi alanın.<br><em>Kendi adresin.</em></h1><p>Sunucunu burada oluştur. Adresini insanlarına gönder.<br>Ayarlarını tek bir yerden yönet.</p><div class="orbital" aria-hidden="true"><div class="orbital-ring"></div><span>✦</span><i>DS</i><b>Bir adres. Yeni bir başlangıç.</b></div><div class="gateway-foot"><span>✧ BİRLİKTE, DAHA YAKIN.</span><span>WEB / 08</span></div></div>
+   <div class="gateway-card"><div id="gateway-loading"><span class="eyebrow">ALANIN HAZIRLANIYOR</span><h2>Bir bağlantı kuralım.</h2><p>Çalışan Drainsood hizmeti kontrol ediliyor…</p><div class="loading-line"></div></div>
+    <div id="service-setup" hidden>
+     <span class="eyebrow">HERKES KENDİ ALANINI AÇABİLİR</span><h2>Sunucun, bir adım ötede.</h2>
+     <p id="setup-message">Drainsood’u kur. Uygulamadaki <b>Sunucu oluştur</b> düğmesi seni çalışan web paneline götürür.</p>
+     <div id="local-start-guide" class="local-start-guide"><span class="start-step">01</span><div><strong>Hesabını aç. Sunucunu oluştur.</strong><p>Windows veya Android uygulamasında <b>Sunucu oluştur / Oluştur</b> seç. Tarayıcıda hesabınla giriş yap, sunucuna bir ad ver. Proje klasörü gerekmez.</p></div></div>
+     <a id="open-installed-app" class="primary app-handoff" href="drainsood://panel">Uygulamada aç <span>↗</span></a>
+     <div class="panel-downloads"><span>İLK KEZ Mİ GELDİN? ÜCRETSİZ İNDİR.</span><a id="panel-download-windows" href="../indir/Drainsood%20Setup.exe" download>Windows EXE ↙</a><a id="panel-download-android" href="../indir/DrainsoodPhone-1.0.8.apk" download>Android APK ↙</a></div>
+     <p class="small-note">Uygulama açılmıyorsa önce yeni sürümü kur. Windows’ta <b>Drainsood - Sunucu Olustur</b> kısayolunu da kullanabilirsin.</p>
+     <form id="service-form"><label>Arkadaşının çalışan hizmet adresi<input name="server" type="url" required value="http://127.0.0.1:8765" placeholder="http://192.168.1.20:8765" autocomplete="url"></label><p class="form-error" role="alert"></p><button class="secondary" type="submit">Bu hizmette sunucu oluştur <span>↗</span></button></form>
+     <p id="hosting-status" class="small-note">Şu anda ortak internet hizmeti yayında değil. Aynı Wi-Fi’da PC’deki hizmete bağlanıp herkes kendi hesabıyla sunucu oluşturabilir. <code>127.0.0.1</code> yalnızca kendi cihazını açar.</p>
+     <a id="service-link" class="service-link" hidden>Ortak yönetim panelini aç ↗</a>
+    </div>
+    <div id="auth" hidden><span class="eyebrow">KENDİ SUNUCUNU OLUŞTUR</span><h2 id="auth-title">Tekrar hoş geldin.</h2><p>Uygulamada bu bağlantı adresinde kullandığın hesabınla giriş yap.</p><div class="auth-tabs"><button id="login-tab" class="active" type="button">Giriş yap</button><button id="register-tab" type="button">Hesap oluştur</button></div><form id="auth-form"><label id="display-field" hidden>Görünen ad<input name="display_name" maxlength="32" autocomplete="nickname"></label><label>Kullanıcı adı<input name="username" required minlength="3" maxlength="24" pattern="[a-z0-9_]{3,24}" autocomplete="username" placeholder="kullanici_adi"></label><label>Şifre<input name="password" type="password" required minlength="8" maxlength="128" autocomplete="current-password" placeholder="En az 8 karakter"></label><p class="form-error" role="alert"></p><button class="primary" id="auth-submit" type="submit">Giriş yap <span>↗</span></button></form><p class="small-note">İki cihazda da aynı hizmeti seç; sunucuların birlikte görünsün.</p></div>
+   </div>
+  </section>
+  <section id="dashboard" class="dashboard" hidden>
+   <aside class="sidebar"><div class="account-card"><span class="account-avatar" id="account-letter">D</span><div><strong id="account-name"></strong><small id="account-username"></small></div><span class="account-online"></span></div><div class="sidebar-heading"><span>SUNUCULARIN</span><span id="server-count">0</span></div><button id="new-server" class="new-server">＋ Yeni sunucu oluştur <span>↗</span></button><label class="filter-label"><span class="visually-hidden">Yüklenen sunucularında ara</span><input id="server-filter" type="search" placeholder="Sunucularında ara…"></label><nav id="server-list" class="server-list" aria-label="Yönettiğin sunucular"></nav><button id="more-servers" class="quiet" hidden>Daha fazla göster</button><div class="sidebar-bottom"><span class="eyebrow">BAĞLI OLDUĞUN HİZMET</span><code id="service-origin"></code><button id="network-open" class="quiet">Ev ağı bağlantısı ↗</button><a class="quiet" href="/phone/">Sohbete dön ↗</a></div></aside>
+   <div class="main-column"><div class="workspace-top"><span class="eyebrow">DRAINSOOD / KONTROL ALANI</span><span id="workspace-mode">SUNUCULARIN</span></div><div id="panel-content"></div><footer class="workspace-footer"><span>Birlikte olmanın güzel bir yeri.</span><span>✦</span></footer></div>
+  </section>
+ </main>
+ <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

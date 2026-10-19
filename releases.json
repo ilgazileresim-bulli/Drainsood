@@ -3,19 +3,19 @@
   "app": "Drainsood",
   "platforms": {
     "windows": {
-      "version": "1.0.3",
+      "version": "1.0.8",
       "url": "https://drainsood.vercel.app/indir/Drainsood%20Setup.exe",
-      "sha256": "bf9d7fee7ca5895b7b4a55ea7b22b8a5baea099aa5cc6aa459ad2fdd48ebbc34",
-      "size": 27204295,
-      "notes": "Kalıcı ortak sunucu bağlantısı ve uygulama içinden güncelleme."
+      "sha256": "6d89463090006b24ebfc970b0d58f9866c07c22cb33b9f007b6c49efe59c15e4",
+      "size": 27432369,
+      "notes": "Herkes için uygulamadan webde sunucu oluşturma; Windows panel kısayolu, siteden uygulamayı açma ve adresle katılım."
     },
     "android": {
-      "version": "1.0.3",
-      "url": "https://drainsood.vercel.app/indir/DrainsoodPhone-1.0.3.apk",
-      "sha256": "c78d02d1a2e09cf1ce61d0f96273f28779d40fcdc005c87d6d6db8a46146c326",
-      "size": 27902735,
-      "notes": "Kalıcı ortak sunucu bağlantısı ve uygulama içinden güncelleme.",
-      "version_code": 4
+      "version": "1.0.8",
+      "url": "https://drainsood.vercel.app/indir/DrainsoodPhone-1.0.8.apk",
+      "sha256": "f7550f01df6496f19f3e0421f263950e54f6488edf12b32301b2ae3facf8016c",
+      "size": 28119974,
+      "notes": "Herkes için uygulamadan webde sunucu oluşturma; Windows panel kısayolu, siteden uygulamayı açma ve adresle katılım.",
+      "version_code": 9
     }
   }
 }

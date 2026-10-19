@@ -1,0 +1,46 @@
+﻿# Herkes için webden sunucu oluşturma — 1.0.8
+
+## Paneli aç
+
+Windows veya Android için **1.0.8** sürümünü kur. Windows uygulamasında **＋ Sunucu oluştur**, Android’de **Oluştur** düğmesine bas. Tarayıcıda web paneli açılır. Bu hizmette kendi hesabınla giriş yap veya hesap oluştur. Her hesap kendi sunucularını oluşturabilir; proje klasörü ve BAT dosyası gerekmez.
+
+Windows kurulumu masaüstüne ve Başlat menüsüne **Drainsood - Sunucu Olustur** kısayolunu ekler. Uygulama zaten açıksa kısayol, o uygulamanın bağlı olduğu hizmetin panelini açar. Sitedeki **Uygulamada aç** düğmesi de kurulu 1.0.8 uygulamasına geçer. Tarayıcı uygulamayı açma izni sorabilir.
+
+Varsayılan yerel panel: `http://127.0.0.1:8765/panel/`. Farklı bir hizmete bağlıysan uygulamadaki oluşturma düğmesi o hizmetin panelini açar. Sitedeki **Sunucu yönetimi** bağlantısı da panelin girişidir. İnternet hosting hesabı henüz kurulmadığı için bu sürüm yerel kullanım içindir.
+
+Paneli doğrudan dosyadan görmek için `DrainsoodWEBSİTE/panel/index.html` dosyasını aç. Başlangıç sayfasından uygulamayı açabilir, EXE/APK indirebilir veya arkadaşının çalışan hizmet adresine geçebilirsin.
+
+## Sunucu oluştur
+
+Webde, uygulamada bu hizmette kullandığın hesapla giriş yap. Hesabın yoksa oluştur. **Yeni sunucu oluştur** alanına adını, simgesini ve isteğe bağlı açıklamasını yaz. **Sunucumu oluştur** düğmesine bas.
+
+Her yeni sunucuya `DS-` ile başlayan 32 haneli, kullanılmamış bir adres atanır. Bu gerçek bir IP değildir; aynı çalışan Drainsood hizmetinde çözülen kalıcı sunucu adresidir. Adres alanında çok sayıda benzersiz adres üretilebilir; her sunucu için ayrı bir port veya Python işlemi açılmaz. Yeni sunucuda yalnızca sen üye olursun. Diğer sunucuların üyeleri ve konuşmaları bu yeni sunucuya taşınmaz.
+
+## Annenle aynı Wi-Fi ağında katıl
+
+1. PC ve Drainsood açık kalsın. Web panelinde **Ev ağı bağlantısı** bölümünü aç.
+2. Paylaşım kapalıysa **Aynı Wi-Fi ağından erişim** seçeneğini kaydet. Değişiklik için Drainsood’u kapatıp normal kısayolundan yeniden aç.
+3. Panelde gösterilen `http://192.168...:8765` gibi PC hizmet adresini telefondaki **Sunucu** alanına gir. İki cihaz da aynı hizmette olmalı.
+4. Herkes kendine ayrı bir hesap açsın. Sunucu sahibi web panelinden **Tam bağlantıyı kopyala** düğmesine bassın.
+5. Uygulamada **Sunucuya katıl / Adresle katıl** alanına tam bağlantıyı veya aynı hizmetteki DS adresini gir. Katılım açıksa sunucuya katılırsın.
+6. Arkadaşını kullanıcı adıyla ekleyip mesajlaşabilirsin. Sunucunun genel kanalında da konuşabilirsiniz.
+
+`127.0.0.1`, bulunduğun cihazın kendisidir; telefona PC adresi olarak yazılmaz. Windows ağ izni ve Wi-Fi cihazlarının birbirini görebilmesi bağlantıyı etkileyebilir. Telefon aramaları için güvenilen HTTPS gerekir; ev ağındaki HTTP bağlantısı mesajlaşmayı sağlar.
+
+## Ayarları webden değiştir
+
+- **Genel ayarlar:** sunucu adı, simge, açıklama ve yeni katılımları açma/kapatma.
+- **Kanallar:** yazı/ses kanalı oluşturma; mevcut kanal adını ve açıklamasını düzenleme.
+- **Üyeler:** üye listesi ve sunucu sahibi.
+- **Davet kodunu yenile:** eski davet kodunu kapatır. Kalıcı DS adresini değiştirmez. Yeni katılımları tamamen kapatmak için katılım anahtarını kullan.
+
+Sunucu ayarlarını yalnızca sahibi yönetebilir. Aynı ayar iki pencerede değiştirilirse eski pencerenin değişikliği sessizce diğerini ezmez; panel güncel ayarları yeniden açmanı ister. Profil, mikrofon ve ses ayarları uygulamada kalır.
+
+## Veriler ve paketler
+
+PC’deki veriler SQLite veritabanında saklanır. Uygulamayı kapatıp açmak sunucuları, adresleri veya mesajları silmez. Eski bağımsız sunucu klasörleri korunur; onların adresine bağlanırsan web paneli o hizmeti yönetir. Farklı hizmetlerin hesapları otomatik birleşmez.
+
+- Windows: `DrainsoodWEBSİTE/indir/Drainsood Setup.exe`
+- Android: `DrainsoodWEBSİTE/indir/DrainsoodPhone-1.0.8.apk`
+
+Android APK aynı imza anahtarıyla hazırlanır; eski uygulamayı silmeden üzerine kur. Paketler yerel site klasörüne hazırlanır. Canlı Vercel sitesine yayın ayrı bir işlemdir. Ortak internet hizmeti henüz kurulmamıştır.
