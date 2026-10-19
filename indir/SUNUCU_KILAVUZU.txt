@@ -1,8 +1,8 @@
-﻿# Herkes için webden sunucu oluşturma — 1.0.8
+﻿# Herkes için webden sunucu oluşturma — 1.0.10
 
 ## Paneli aç
 
-Windows için **1.0.8**, Android için **1.0.9** sürümünü kur. Windows uygulamasında **＋ Sunucu oluştur**, Android’de **Oluştur** düğmesine bas. Tarayıcıda web paneli açılır. Bu hizmette kendi hesabınla giriş yap veya hesap oluştur. Her hesap kendi sunucularını oluşturabilir; proje klasörü ve BAT dosyası gerekmez.
+Windows için **1.0.10**, Android için **1.0.10** sürümünü kur. Windows uygulamasında **＋ Sunucu oluştur**, Android’de **Oluştur** düğmesine bas. Tarayıcıda web paneli açılır. Bu hizmette kendi hesabınla giriş yap veya hesap oluştur. Her hesap kendi sunucularını oluşturabilir; proje klasörü ve BAT dosyası gerekmez.
 
 Windows kurulumu masaüstüne ve Başlat menüsüne **Drainsood - Sunucu Olustur** kısayolunu ekler. Uygulama zaten açıksa kısayol, o uygulamanın bağlı olduğu hizmetin panelini açar. Sitedeki **Uygulamada aç** düğmesi de kurulu 1.0.8 uygulamasına geçer. Tarayıcı uygulamayı açma izni sorabilir.
 
@@ -41,6 +41,6 @@ Sunucu ayarlarını yalnızca sahibi yönetebilir. Aynı ayar iki pencerede değ
 PC’deki veriler SQLite veritabanında saklanır. Uygulamayı kapatıp açmak sunucuları, adresleri veya mesajları silmez. Eski bağımsız sunucu klasörleri korunur; onların adresine bağlanırsan web paneli o hizmeti yönetir. Farklı hizmetlerin hesapları otomatik birleşmez.
 
 - Windows: `DrainsoodWEBSİTE/indir/Drainsood Setup.exe`
-- Android: `DrainsoodWEBSİTE/indir/DrainsoodPhone-1.0.9.apk`
+- Android: `DrainsoodWEBSİTE/indir/DrainsoodPhone-1.0.10.apk`
 
 Android APK aynı imza anahtarıyla hazırlanır; eski uygulamayı silmeden üzerine kur. Paketler yerel site klasörüne hazırlanır. Canlı Vercel sitesine yayın ayrı bir işlemdir. Ortak internet hizmeti henüz kurulmamıştır.

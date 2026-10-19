@@ -2,8 +2,8 @@
 (() => {
   const $ = selector => document.querySelector(selector);
   const $$ = selector => [...document.querySelectorAll(selector)];
-  const DOWNLOAD_LINKS = { windows: 'indir/Drainsood%20Setup.exe', android: 'indir/DrainsoodPhone-1.0.9.apk' };
-  const releases = { windows: { name: 'Drainsood Setup.exe', hash: '' }, android: { name: 'DrainsoodPhone-1.0.9.apk', hash: '' } };
+  const DOWNLOAD_LINKS = { windows: 'indir/Drainsood%20Setup.exe', android: 'indir/DrainsoodPhone-1.0.10.apk' };
+  const releases = { windows: { name: 'Drainsood Setup.exe', hash: '' }, android: { name: 'DrainsoodPhone-1.0.10.apk', hash: '' } };
   const descriptions = { chat: 'Bu, Drainsood sohbet arayüzünün örnek görünümüdür.', call: 'Sesli ve görüntülü görüşme ekranını keşfet.', screen: 'Windows ekran paylaşımı görünümünü keşfet.' };
   let toastTimer;
   function notify(message) {

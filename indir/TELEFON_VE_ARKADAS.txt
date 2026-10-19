@@ -1,0 +1,28 @@
+DRAINSOOD 1.0.10 — EN KISA KULLANIM
+
+1. PC’ye yeni Windows kurulumunu, telefona 1.0.10 APK’yi kur.
+   Eski uygulamayı kaldırmadan üzerine kurabilirsin.
+
+2. İki cihaz aynı Wi-Fi’da olsun. PC’de Drainsood açık kalsın.
+   PC’nin web panelinde Ev ağı bağlantısı kapalıysa açıp kaydet.
+   Değişiklikten sonra PC uygulamasını kapatıp yeniden aç.
+
+3. Telefonda PC’yi bul düğmesine bas. Bulunan PC’ye bağlan.
+   Alternatif: PC’de Telefon / arkadaş bağla düğmesinden bağlantını
+   kopyala; telefonda Bağlantı yapıştır alanına yapıştır.
+
+4. Herkes aynı hizmette kendi hesabına giriş yapsın veya hesap açsın.
+   Telefonun kendi yerel hesabı PC hesabından ayrıdır; hesap taşınmaz.
+
+5. Arkadaşlar → Arkadaş ekle. Kullanıcı adını veya arkadaş bağlantısını
+   yaz. Görünen ada göre eşleşmelerden doğru kullanıcıyı seçebilirsin.
+
+6. Diğer kişi Arkadaşlar ekranındaki gelen isteğe Kabul et ve konuş
+   desin. Özel sohbet açılır; karşılıklı mesaj gönderebilirsiniz.
+
+PC bulunmuyorsa önce aynı Wi-Fi’ı, PC uygulamasını ve ev ağı erişimini
+kontrol et. Tam PC bağlantısını yapıştırmak da mümkündür.
+
+Bu paket ortak internet hosting hizmeti kurmaz. Farklı ağlardan kullanım
+için erişilebilir ortak hizmet gerekir. Telefonda medya için uygun HTTPS
+bağlantısı gerekir; iki gerçek cihazdaki aramalar bu sürümde doğrulanmadı.
