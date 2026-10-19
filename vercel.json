@@ -1,0 +1,7 @@
+{
+  "headers": [
+    {"source": "/service.json", "headers": [{"key": "Cache-Control", "value": "no-store, max-age=0"}, {"key":"Access-Control-Allow-Origin", "value":"*"}]},
+    {"source": "/releases.json", "headers": [{"key": "Cache-Control", "value": "no-store, max-age=0"}]},
+    {"source": "/indir/(.*)", "headers": [{"key": "Cache-Control", "value": "no-cache, max-age=0, must-revalidate"}]}
+  ]
+}

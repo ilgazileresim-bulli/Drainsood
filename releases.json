@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "app": "Drainsood",
+  "platforms": {
+    "windows": {
+      "version": "1.0.3",
+      "url": "https://drainsood.vercel.app/indir/Drainsood%20Setup.exe",
+      "sha256": "bf9d7fee7ca5895b7b4a55ea7b22b8a5baea099aa5cc6aa459ad2fdd48ebbc34",
+      "size": 27204295,
+      "notes": "Kalıcı ortak sunucu bağlantısı ve uygulama içinden güncelleme."
+    },
+    "android": {
+      "version": "1.0.3",
+      "url": "https://drainsood.vercel.app/indir/DrainsoodPhone-1.0.3.apk",
+      "sha256": "c78d02d1a2e09cf1ce61d0f96273f28779d40fcdc005c87d6d6db8a46146c326",
+      "size": 27902735,
+      "notes": "Kalıcı ortak sunucu bağlantısı ve uygulama içinden güncelleme.",
+      "version_code": 4
+    }
+  }
+}
