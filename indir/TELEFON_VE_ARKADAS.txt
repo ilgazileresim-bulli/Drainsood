@@ -1,28 +1,29 @@
-DRAINSOOD 1.0.10 — EN KISA KULLANIM
+DRAINSOOD 1.0.13 — TELEFON VE BİLGİSAYARDA MESAJLAŞMA
 
-1. PC’ye yeni Windows kurulumunu, telefona 1.0.10 APK’yi kur.
-   Eski uygulamayı kaldırmadan üzerine kurabilirsin.
+1. Telefona DrainsoodPhone-1.0.13.apk dosyasını kur.
+   Eski Drainsood sürümünü silmeden üzerine kurabilirsin.
 
-2. İki cihaz aynı Wi-Fi’da olsun. PC’de Drainsood açık kalsın.
-   PC’nin web panelinde Ev ağı bağlantısı kapalıysa açıp kaydet.
-   Değişiklikten sonra PC uygulamasını kapatıp yeniden aç.
+2. Uygulamayı aç ve ortak Drainsood hizmetini seç.
+   Bilgisayarın açık kalması veya aynı Wi-Fi ağına bağlı olmanız gerekmez.
 
-3. Telefonda PC’yi bul düğmesine bas. Bulunan PC’ye bağlan.
-   Alternatif: PC’de Telefon / arkadaş bağla düğmesinden bağlantını
-   kopyala; telefonda Bağlantı yapıştır alanına yapıştır.
+3. Herkes kendi hesabını oluştursun. Aynı hesabı telefon ve bilgisayarda
+   kullanmak istiyorsan aynı kullanıcı adı ve şifreyle giriş yap.
 
-4. Herkes aynı hizmette kendi hesabına giriş yapsın veya hesap açsın.
-   Telefonun kendi yerel hesabı PC hesabından ayrıdır; hesap taşınmaz.
+4. Arkadaşlar → Arkadaş ekle bölümüne kişinin kullanıcı adını yaz.
+   Başındaki @ işaretini yazsan da yazmasan da kullanıcı adı aranır.
 
-5. Arkadaşlar → Arkadaş ekle. Kullanıcı adını veya arkadaş bağlantısını
-   yaz. Görünen ada göre eşleşmelerden doğru kullanıcıyı seçebilirsin.
+5. Karşı taraf gelen isteği kabul etsin. Kabulden sonra özel sohbet açılır;
+   iki taraf da mesaj gönderebilir ve geçmiş mesajlar ortak hizmette saklanır.
 
-6. Diğer kişi Arkadaşlar ekranındaki gelen isteğe Kabul et ve konuş
-   desin. Özel sohbet açılır; karşılıklı mesaj gönderebilirsiniz.
+ARKADAŞ BULUNMUYORSA
 
-PC bulunmuyorsa önce aynı Wi-Fi’ı, PC uygulamasını ve ev ağı erişimini
-kontrol et. Tam PC bağlantısını yapıştırmak da mümkündür.
+- Kullanıcı adını görünen adla karıştırma; profildeki @kullanici_adi değerini kullan.
+- İki kişinin de ortak Drainsood hizmetinde hesap açtığını kontrol et.
+- Telefonun internet bağlantısını kontrol edip uygulamayı yeniden aç.
+- Eski sürüm kullanıyorsan 1.0.13 APK'yi mevcut uygulamanın üzerine kur.
 
-Bu paket ortak internet hosting hizmeti kurmaz. Farklı ağlardan kullanım
-için erişilebilir ortak hizmet gerekir. Telefonda medya için uygun HTTPS
-bağlantısı gerekir; iki gerçek cihazdaki aramalar bu sürümde doğrulanmadı.
+ARAMALAR
+
+Sesli ve görüntülü görüşme için mikrofon ve kamera izinlerini ver. Görüşme
+kalitesi cihaz ve internet bağlantısına bağlıdır. Bazı kısıtlı ağlarda TURN
+aktarma hizmeti olmadığı için arama bağlantısı kurulamayabilir.

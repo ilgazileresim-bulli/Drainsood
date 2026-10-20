@@ -3,19 +3,19 @@
   "app": "Drainsood",
   "platforms": {
     "windows": {
-      "version": "1.0.10",
+      "version": "1.0.14",
       "url": "https://drainsood.vercel.app/indir/Drainsood%20Setup.exe",
-      "sha256": "71b5935262eb5ad6118c41e5ed39a62776c8d28c062cb03fe75ea7a54d8215ab",
-      "size": 27437868,
-      "notes": "Telefon / arkadaş bağlantısı paylaşma, görünür arkadaşlık istekleri ve kabulden sonra doğrudan sohbet."
+      "sha256": "d5857dae5ed8df8e56c7f2f9e5bb08b89eaeba685919afb41e2b7f66cc5c09ec",
+      "size": 27441566,
+      "notes": "Nocturne 1.0.14 arayüzü, ortak HTTPS hesabı, arkadaşlık, özel mesajlaşma ve güvenli güncelleme; Android 1.0.13 ile aynı hesap alanı."
     },
     "android": {
-      "version": "1.0.10",
-      "url": "https://drainsood.vercel.app/indir/DrainsoodPhone-1.0.10.apk",
-      "sha256": "28a78cff476dad54f3e3d56abe7262ebda51fcffd36503c7e9b55ee287c6b701",
-      "size": 28128166,
-      "notes": "Pratik telefon bağlantısı, aynı Wi-Fi’da PC bulma, arkadaş bağlantısı, görünür gelen istekler ve kabulden sonra doğrudan sohbet.",
-      "version_code": 11
+      "version": "1.0.13",
+      "url": "https://drainsood.vercel.app/indir/DrainsoodPhone-1.0.13.apk",
+      "sha256": "e052cb70748835b97de20ff9813bf04eb9f62a5f29ad235e50b66316ed65cf7a",
+      "size": 28132262,
+      "notes": "PC gerektirmeyen ortak HTTPS hesabı; kullanıcı adıyla arkadaş ekleme ve iki yönlü kalıcı mesajlaşma.",
+      "version_code": 14
     }
   }
 }

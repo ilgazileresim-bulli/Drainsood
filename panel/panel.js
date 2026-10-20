@@ -48,6 +48,10 @@
  bindForm('#auth-form',async form=>{await api('/'+model.mode,'POST',{username:form.elements.username.value,password:form.elements.password.value,display_name:form.elements.display_name.value||form.elements.username.value});form.elements.password.value='';await signedIn();});
  $('#signout').onclick=async()=>{try{await api('/logout','POST',{});model.me=null;model.detail=null;model.servers=[];model.request++;$('#panel-content').replaceChildren();$('#server-list').replaceChildren();showAuth();notify('Oturum kapatıldı.');}catch(error){notify(error.message,true);}};
  bindForm('#service-form',async form=>{const target=rootAddress(form.elements.server.value);location.assign(target+'/panel/');});
+ async function serviceDirectory(){
+  try{const response=await fetch('/service.json',{cache:'no-store'});if(!response.ok)return null;const config=await response.json();if(config.app!=='Drainsood'||config.schema!==1||!config.server)return null;const target=rootAddress(config.server);return target.startsWith('https://')?target:null;}catch{return null;}
+ }
+ function showRemoteService(target){gateway('service-setup');$('#connection-state').textContent='Ortak hizmet hazır';$('#connection-state').classList.add('connected');$('#service-link').href=target+'/panel/';$('#service-link').hidden=false;$('#hosting-status').hidden=true;$('#setup-message').textContent='Ortak Drainsood hizmeti hazır. Yönetimi kendi bağlantı adresinde açabilirsin.';}
  async function start(){
   if(location.protocol==='file:'){
    gateway('service-setup');
@@ -56,6 +60,9 @@
    $('#setup-message').textContent='Windows veya Android uygulamasını aç; Sunucu oluştur düğmesinden çalışan web paneline geç.';
    return;
   }
-  try{const health=await api('/health');if(health.app!=='Drainsood'||!health.ok)throw new Error('Drainsood hizmeti bulunamadı.');$('.brand').href='/';try{await signedIn();}catch(error){if(error.status!==401)notify(error.message,true);showAuth();}}catch{gateway('service-setup');$('#connection-state').textContent='Yerel bağlantı bekleniyor';try{const response=await fetch('/service.json',{cache:'no-store'}),config=await response.json();if(config.app==='Drainsood'&&config.schema===1&&config.server){const target=rootAddress(config.server);if(!target.startsWith('https://'))return;$('#service-link').href=target+'/panel/';$('#service-link').hidden=false;$('#hosting-status').hidden=true;$('#setup-message').textContent='Ortak Drainsood hizmeti hazır. Yönetimi kendi bağlantı adresinde açabilirsin.';}}catch{}}}
+  const remote=await serviceDirectory();
+  if(remote&&remote!==location.origin){showRemoteService(remote);return;}
+  try{const health=await api('/health');if(health.app!=='Drainsood'||!health.ok)throw new Error('Drainsood hizmeti bulunamadı.');$('.brand').href='/';try{await signedIn();}catch(error){if(error.status!==401)notify(error.message,true);showAuth();}}catch{if(remote)showRemoteService(remote);else{gateway('service-setup');$('#connection-state').textContent='Bağlantı bekleniyor';}}
+ }
  window.DrainsoodPanel={ready:start(),model};
 })();

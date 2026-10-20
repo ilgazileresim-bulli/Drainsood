@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drainsood.vercel.app/sitemap.xml

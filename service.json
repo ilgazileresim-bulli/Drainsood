@@ -1,6 +1,6 @@
 {
   "schema": 1,
   "app": "Drainsood",
-  "server": "",
-  "status": "setup_required"
+  "server": "https://drainsood-chat-2026.mightypeach6.chatgpt.site",
+  "status": "ready"
 }

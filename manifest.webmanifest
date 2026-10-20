@@ -1,0 +1,19 @@
+{
+  "name": "Drainsood",
+  "short_name": "Drainsood",
+  "description": "Arkadaşlarınla mesajlaş, konuş ve aynı yerde buluş.",
+  "lang": "tr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#07080d",
+  "theme_color": "#0a0b10",
+  "icons": [
+    {
+      "src": "/assets/drainsood.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

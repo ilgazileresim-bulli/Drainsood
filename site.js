@@ -2,8 +2,8 @@
 (() => {
   const $ = selector => document.querySelector(selector);
   const $$ = selector => [...document.querySelectorAll(selector)];
-  const DOWNLOAD_LINKS = { windows: 'indir/Drainsood%20Setup.exe', android: 'indir/DrainsoodPhone-1.0.10.apk' };
-  const releases = { windows: { name: 'Drainsood Setup.exe', hash: '' }, android: { name: 'DrainsoodPhone-1.0.10.apk', hash: '' } };
+  const DOWNLOAD_LINKS = { windows: 'indir/Drainsood%20Setup.exe', android: 'indir/DrainsoodPhone-1.0.13.apk' };
+  const releases = { windows: { name: 'Drainsood Setup.exe', hash: '' }, android: { name: 'DrainsoodPhone-1.0.13.apk', hash: '' } };
   const descriptions = { chat: 'Bu, Drainsood sohbet arayüzünün örnek görünümüdür.', call: 'Sesli ve görüntülü görüşme ekranını keşfet.', screen: 'Windows ekran paylaşımı görünümünü keşfet.' };
   let toastTimer;
   function notify(message) {
@@ -131,7 +131,7 @@
     if (service.app !== 'Drainsood' || service.schema !== 1 || typeof service.server !== 'string' || !service.server) return;
     const url = new URL(service.server);
     if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash) return;
-    $('#service-status').textContent = 'Arkadaşlarınla buluşmak için uygulamada aynı ortak sunucuyu seç. Kurulum ve bağlantı adımları rehberde.';
+    $('#service-status').textContent = 'Ortak Drainsood hizmeti hazır. Hesabını aç, arkadaşını kullanıcı adıyla ekle ve mesajlaşmaya başla.';
   }).catch(() => {});
   if ('IntersectionObserver' in window) {
     const links = $$('#navigation a');
@@ -148,5 +148,45 @@
       link.classList.toggle('button-glass', link.dataset.download !== 'android');
     });
   }
+  function initEdgeParticles() {
+    const layer = $('.sky-particles');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const mobileView = window.matchMedia('(max-width: 680px)');
+    const edges = ['left', 'right', 'top', 'bottom'];
+    let particleTimer;
+    const randomIndex = length => Math.floor(Math.random() * length);
+
+    function spawnParticle() {
+      const limit = mobileView.matches ? 5 : 8;
+      if (document.hidden || reducedMotion.matches || layer.childElementCount >= limit) return;
+      const particle = document.createElement('i');
+      const edge = edges[randomIndex(edges.length)];
+      const lane = randomIndex(8) + 1;
+      const drift = randomIndex(5) + 1;
+      const look = randomIndex(5) + 1;
+      particle.className = `edge-${edge} particle-lane-${lane} particle-drift-${drift} particle-look-${look}`;
+      particle.addEventListener('animationend', () => particle.remove(), { once: true });
+      layer.append(particle);
+    }
+
+    function startParticles() {
+      clearInterval(particleTimer);
+      if (reducedMotion.matches || document.hidden) {
+        layer.replaceChildren();
+        return;
+      }
+      const initialCount = mobileView.matches ? 3 : 5;
+      for (let index = 0; index < initialCount; index += 1) {
+        setTimeout(spawnParticle, index * 260);
+      }
+      particleTimer = setInterval(spawnParticle, mobileView.matches ? 1650 : 1150);
+    }
+
+    document.addEventListener('visibilitychange', startParticles);
+    reducedMotion.addEventListener('change', startParticles);
+    mobileView.addEventListener('change', startParticles);
+    startParticles();
+  }
+  initEdgeParticles();
   window.DrainsoodSite = { selectPreview, selectGuide, releases, downloadLinks: DOWNLOAD_LINKS, ready: Promise.all([releaseReady, serviceReady]) };
 })();
